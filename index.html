@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Pacientes del Hospital</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="scripts/clases.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+<body class="container">
+    <h1 class="text-center">Gestión de Pacientes del Hospital</h1>
+    <div class="form-container">
+        <h2 class="text-center">Ingresa los Datos del Paciente:</h2>
+        <div class="input-group">
+            <input type="text" id="inputNombre" class="form-control" placeholder="Nombre:">
+            <input type="text" id="inputRUT" class="form-control" placeholder="RUT:">
+            <input type="number" id="inputEdad" class="form-control" placeholder="Edad:">
+            <input type="text" id="inputHistoriaMedica" class="form-control" placeholder="Historia Médica:">
+        </div>
+        <div class="btn-group">
+            <button onclick="agregarPacienteDesdeUI()" class="btn btn-primary">Agregar Paciente</button>
+            <button onclick="buscarPacienteDesdeUI()" class="btn btn-secondary">Buscar Paciente</button>
+            <button onclick="mostrarPacientes()" class="btn btn-info">Mostrar Todos los Pacientes</button>
+        </div>
+        <button id="confirmarEdicion" onclick="confirmarEdicion()" class="btn btn-success" style="display:none;">Confirmar Cambios</button>
+        <div id="output" class="patient-list"></div>
+    </div>
+    
+</body>
+</html>
